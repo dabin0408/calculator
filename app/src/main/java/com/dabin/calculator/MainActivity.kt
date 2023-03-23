@@ -3,6 +3,7 @@ package com.dabin.calculator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
@@ -12,7 +13,8 @@ class MainActivity : AppCompatActivity() {
 
         val button1 = findViewById<Button>(R.id.btn_reset)
         button1.setOnClickListener {
-            Toast.makeText(this, "reset", Toast.LENGTH_LONG).show()
+            val textView = findViewById<TextView>(R.id.text)
+            textView.setText("")
         }
     }
 }
